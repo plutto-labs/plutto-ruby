@@ -1,7 +1,8 @@
 # Plutto Ruby SDK
 
 [![Gem Version](https://badge.fury.io/rb/plutto-ruby.svg)](https://badge.fury.io/rb/plutto-ruby)
-[![CircleCI](https://circleci.com/gh/platanus/plutto-ruby.svg?style=shield)](https://app.circleci.com/pipelines/github/platanus/plutto-ruby)
+[![CircleCI](https://circleci.com/gh/plutto-labs/plutto-ruby/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/platanus/plutto-ruby)
+[![codecov](https://codecov.io/gh/plutto-labs/plutto-ruby/branch/master/graph/badge.svg)](https://codecov.io/gh/plutto-labs/plutto-ruby)
 
 This gem will help you easily integrate Plutto API to your software, making your developer life a little bit more enjoyable.
 

@@ -2,8 +2,13 @@ require 'plutto'
 require 'simplecov'
 require 'pry'
 
-formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter::new(formatters)
+formatters = [SimpleCov::Formatter::HTMLFormatter]
+
+if ENV['CI'] == 'true'
+  require 'codecov'
+  formatters << SimpleCov::Formatter::Codecov
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter::new(formatters)
+end
 
 SimpleCov.start do
   enable_coverage :branch
