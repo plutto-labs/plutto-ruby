@@ -8,13 +8,13 @@ This gem will help you easily integrate Plutto API to your software, making your
 ## Installation
 
 ```bash
-$ gem install plutto-ruby
+$ gem install plutto
 ```
 
 Or add to your Gemfile:
 
 ```ruby
-gem "plutto-ruby"
+gem 'plutto'
 ```
 
 ```bash
@@ -39,7 +39,7 @@ You need to put **all your tests** in the `/my_gem/spec/` directory.
 
 On master/main branch...
 
-1. Change `VERSION` in `lib/plutto-ruby/version.rb`.
+1. Change `VERSION` in `lib/plutto/version.rb`.
 2. Change `Unreleased` title to current version in `CHANGELOG.md`.
 3. Run `bundle install`.
 4. Commit new release. For example: `Releasing v0.1.0`.

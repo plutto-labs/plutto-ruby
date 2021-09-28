@@ -1,11 +1,8 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "plutto-ruby/version"
+require_relative 'lib/plutto/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "plutto-ruby"
-  spec.version       = Plutto-ruby::VERSION
+  spec.name          = "plutto"
+  spec.version       = Plutto::VERSION
   spec.authors       = ["Plutto", "Marco"]
   spec.email         = ["marco@platan.us"]
   spec.homepage      = "https://github.com/plutto-labs/plutto-ruby"
@@ -19,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.2.15"
-  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "codecov"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
