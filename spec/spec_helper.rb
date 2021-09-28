@@ -1,24 +1,29 @@
+require 'plutto'
 require 'simplecov'
-require 'coveralls'
+require 'pry'
 
-formatters = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter::new(formatters)
+formatters = [SimpleCov::Formatter::HTMLFormatter]
+
+if ENV['CI'] == 'true'
+  require 'codecov'
+  formatters << SimpleCov::Formatter::Codecov
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter::new(formatters)
+end
 
 SimpleCov.start do
+  enable_coverage :branch
   add_filter { |src| !(src.filename =~ /lib/) }
   add_filter "spec.rb"
 end
-
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "plutto-ruby"
-require "pry"
-
-path = [File.dirname(__FILE__), "support", "**", "*.rb"]
-Dir[File.join(path)].each { |f| require f }
 
 RSpec.configure do |config|
   config.filter_run :focus
   config.run_all_when_everything_filtered = true
 
-  config.include TestHelpers
+  # Enable flags like --only-failures and --next-failure
+  config.example_status_persistence_file_path = '.rspec_status'
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
 end

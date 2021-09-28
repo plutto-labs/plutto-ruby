@@ -1,7 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Specify your gem's dependencies in plutto-ruby.gemspec
 gemspec
 
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
+gem 'codecov'
+gem 'rake', '~> 12.0'
+gem 'rspec', '~> 3.0'

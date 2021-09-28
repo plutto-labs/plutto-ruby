@@ -1,20 +1,21 @@
 # Plutto Ruby SDK
 
 [![Gem Version](https://badge.fury.io/rb/plutto-ruby.svg)](https://badge.fury.io/rb/plutto-ruby)
-[![CircleCI](https://circleci.com/gh/platanus/plutto-ruby.svg?style=shield)](https://app.circleci.com/pipelines/github/platanus/plutto-ruby)
+[![CircleCI](https://circleci.com/gh/plutto-labs/plutto-ruby/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/platanus/plutto-ruby)
+[![codecov](https://codecov.io/gh/plutto-labs/plutto-ruby/branch/master/graph/badge.svg)](https://codecov.io/gh/plutto-labs/plutto-ruby)
 
 This gem will help you easily integrate Plutto API to your software, making your developer life a little bit more enjoyable.
 
 ## Installation
 
 ```bash
-$ gem install plutto-ruby
+$ gem install plutto
 ```
 
 Or add to your Gemfile:
 
 ```ruby
-gem "plutto-ruby"
+gem 'plutto'
 ```
 
 ```bash
@@ -39,7 +40,7 @@ You need to put **all your tests** in the `/my_gem/spec/` directory.
 
 On master/main branch...
 
-1. Change `VERSION` in `lib/plutto-ruby/version.rb`.
+1. Change `VERSION` in `lib/plutto/version.rb`.
 2. Change `Unreleased` title to current version in `CHANGELOG.md`.
 3. Run `bundle install`.
 4. Commit new release. For example: `Releasing v0.1.0`.
