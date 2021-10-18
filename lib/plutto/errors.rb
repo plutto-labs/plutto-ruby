@@ -28,5 +28,7 @@ module Plutto
     class NotFoundError < PluttoError; end
 
     class InternalServerError < PluttoError; end
+
+    class ResourceNotFoundError < PluttoError; end
   end
 end
