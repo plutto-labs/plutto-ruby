@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://sandbox.getplutto.com/api/v1/customers/ID_123
+    body:
+      encoding: UTF-8
+      string: '{"name":"updated","email":"updated@gmail.com"}'
+    headers:
+      Authorization:
+      - Bearer invalid api_key
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 26 Oct 2021 15:55:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - f2b404c1-deca-4097-bf69-91d51fc78bae
+      X-Runtime:
+      - '0.011261'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=07FJYDCRMAuujDZ5i%2Bs5%2BRINOZHkkfh1XyrUMdeuwHm6ND19LMvYWLq%2B8%2BdURJ%2B1dTq265FzzIcJOoe7BxHm7sTdP4ctS3NCA9Yj94lMK0O9aUdVCDFpDr1f3G%2Fl83OOZ2bUBiCnDyY%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6a44de15f85f2df4-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"error":{"type":"authentication_error","code":"unauthorized","message":"No
+        valid API key provided.","detail":null,"param":null,"request_id":null,"docs_url":"https://docs.getplutto.com"}}'
+  recorded_at: Tue, 26 Oct 2021 15:55:11 GMT
+recorded_with: VCR 6.0.0

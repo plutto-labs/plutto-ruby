@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.getplutto.com/api/v1/customers
+    body:
+      encoding: UTF-8
+      string: '{"email":"wrongmail","billing_information":{"country_iso_code":"asd"}}'
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Tue, 26 Oct 2021 15:55:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 1cfbc208-6531-4b5d-b2e2-ce34b15d15a6
+      X-Runtime:
+      - '0.018940'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NkloL3Cx3QJAEtGOdzwi02czxyVmIJODK%2B4gHHSyhlDfNffflb0sm5dbyQqbCEhioUaf2gr7UlvE3kVHnjWr1ftImSHASRZrgOd1nNRvuRu%2Fh8BnoRauS41gP0PR5i4lEUeI2mqxdZY%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6a44de093f4d6f2b-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"error":{"type":"invalid_request_error","code":"unprocessable_entity","message":"Your
+        request was understood, but we were not able to process it. Please fix it
+        before repeating","detail":"Email invalid email","param":"email","request_id":null,"docs_url":"https://docs.getplutto.com"}}'
+  recorded_at: Tue, 26 Oct 2021 15:55:10 GMT
+recorded_with: VCR 6.0.0
