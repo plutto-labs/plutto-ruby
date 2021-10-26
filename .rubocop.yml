@@ -481,16 +481,3 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Description: Disallow overriding the `Struct` built-in methods via `Struct.new`.
   Enabled: true
-Style/OptionalBooleanParameter:
-  Description: 'Use keyword arguments when defining method with boolean argument.'
-  Enabled: false
-Lint/MissingSuper:
-  Description: >-
-                  This cop checks for the presence of constructors and lifecycle callbacks
-                  without calls to `super`'.
-  Enabled: false
-Style/RedundantFileExtensionInRequire:
-  Description: >-
-                  Checks for the presence of superfluous `.rb` extension in
-                  the filename provided to `require` and `require_relative`.
-  Enabled: false
