@@ -47,7 +47,7 @@ RSpec.describe Plutto::Client do
       customer = client.create_customer(customer_data)
       expect(customer).to be_a(Plutto::Customer)
       expect(customer.email).to eq('test@gmail.com')
-      expect(customer.billing_information).to eq(billing_information)
+      expect(customer.billing_information).to be_a(Plutto::BillingInformation)
     end
 
     it_behaves_like 'unauthorized endpoint', 'create_customer' do

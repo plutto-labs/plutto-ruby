@@ -1,6 +1,5 @@
 require 'plutto/client'
 require 'plutto/resources/customer'
-require 'factory_bot_rails'
 
 RSpec.describe Plutto::Customer do
   let(:api_key) { 'sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f' }
