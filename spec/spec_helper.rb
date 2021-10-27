@@ -1,6 +1,8 @@
 require 'plutto'
 require 'simplecov'
 require 'pry'
+require 'vcr'
+require 'factory_bot_rails'
 
 formatters = [SimpleCov::Formatter::HTMLFormatter]
 
@@ -12,11 +14,26 @@ end
 
 SimpleCov.start do
   enable_coverage :branch
-  add_filter { |src| !(src.filename =~ /lib/) }
+  add_filter { |src| src.filename !~ /lib/ }
   add_filter "spec.rb"
 end
 
+VCR.configure do |c|
+  c.default_cassette_options = {
+    re_record_interval: 3600 * 24 * 70
+  }
+  c.cassette_library_dir = 'spec/vcr'
+  c.hook_into :webmock
+  c.configure_rspec_metadata!
+  c.ignore_localhost = true
+end
+
+Dir[File.expand_path(File.join(File.dirname(__FILE__), 'support', '**', '*.rb'))].each do |file|
+  require file
+end
+
 RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
   config.filter_run :focus
   config.run_all_when_everything_filtered = true
 

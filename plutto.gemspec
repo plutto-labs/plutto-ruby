@@ -14,14 +14,17 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
+  spec.add_dependency 'http'
+  spec.add_dependency 'tabulate'
   spec.add_development_dependency "bundler", "~> 2.2.15"
   spec.add_development_dependency "codecov"
   spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency "pry"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec_junit_formatter"
   spec.add_development_dependency "rubocop", "~> 1.9"
   spec.add_development_dependency "rubocop-rails"
-  spec.add_development_dependency "pry"
+  spec.add_development_dependency 'vcr'
+  spec.add_development_dependency 'webmock'
 end
