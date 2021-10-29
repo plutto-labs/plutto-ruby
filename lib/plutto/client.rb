@@ -111,7 +111,7 @@ module Plutto
     end
 
     def raise_custom_error(error)
-      raise error_class(error[:code]).new(error[:message], error[:doc_url])
+      raise error_class(error[:code]).new(error[:message], error[:docs_url])
     end
 
     def error_class(snake_code)
