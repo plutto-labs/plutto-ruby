@@ -1,9 +1,14 @@
 require 'plutto/resources/invoice'
 
 RSpec.describe Plutto::Invoice do
+  let(:api_key) { 'sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f' }
+  let(:client) { Plutto::Client.new(api_key) }
+  let(:invoice_id) { 'invoice_5281dfee1bccb3a5c78f802e' }
+
   let(:data) do
     {
-      id: 'invoice_5281dfee1bccb3a5c78f802e',
+      client: client,
+      id: invoice_id,
       subtotal_cents: 0,
       tax_cents: 0,
       discount_cents: 0,
@@ -55,5 +60,14 @@ RSpec.describe Plutto::Invoice do
 
   it "print the Invoice info when to_s is called" do
     expect(invoice.to_s).to eq("Phobos's invoice from 20 Oct 2021")
+  end
+
+  describe '#mark_as' do
+    it 'calls invoice_mark_as on client', :vcr do
+      allow(client).to receive(:invoice_mark_as).with(invoice_id: invoice.id, status: 'paid')
+      invoice.mark_as(status: 'paid')
+      expect(client).to have_received(:invoice_mark_as)
+        .with(invoice_id: invoice.id, status: 'paid').once
+    end
   end
 end

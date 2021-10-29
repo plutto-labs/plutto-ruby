@@ -4,6 +4,8 @@ require 'plutto/errors'
 require 'plutto/constants'
 require 'plutto/version'
 require 'plutto/resources/customer'
+require 'plutto/resources/meter_event'
+require 'plutto/resources/invoice'
 require 'json'
 
 module Plutto
@@ -48,6 +50,23 @@ module Plutto
 
     def delete_customer(customer_id:)
       delete.call("customers/#{customer_id}")
+    end
+
+    def get_invoices(q_status = nil, q_customer = nil)
+      suffix = Utils.concat_query_to_url(q_status, q_customer)
+      get.call("invoices#{suffix}")[:invoices].map do |invoice|
+        Invoice.new(**invoice, client: self)
+      end
+    end
+
+    def get_invoice(invoice_id:)
+      invoice = get.call("invoices/#{invoice_id}")[:invoice]
+      Invoice.new(**invoice, client: self)
+    end
+
+    def invoice_mark_as(invoice_id:, **params)
+      invoice = patch.call("invoices/#{invoice_id}/mark_as", **params)[:invoice]
+      Invoice.new(**invoice, client: self)
     end
 
     private
@@ -96,7 +115,7 @@ module Plutto
     end
 
     def error_class(snake_code)
-      pascal_code = Utils.snake_to_pascal(snake_code)
+      pascal_code = snake_code.camelize
       class_name = pascal_code.end_with?('Error') ? pascal_code : "#{pascal_code}Error"
       Module.const_get("Plutto::Errors::#{class_name}")
     end

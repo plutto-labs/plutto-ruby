@@ -53,5 +53,9 @@ module Plutto
     def to_s
       "#{@customer_name.capitalize}'s invoice from #{issue_date.strftime('%d %b %Y')}"
     end
+
+    def mark_as(status:)
+      @client.invoice_mark_as(invoice_id: @id, status: status)
+    end
   end
 end

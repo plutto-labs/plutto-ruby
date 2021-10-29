@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/invoices
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Oct 2021 21:42:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Per-Page:
+      - '25'
+      X-Page:
+      - '1'
+      X-Total:
+      - '5'
+      Etag:
+      - W/"5a0cd1d5245a6f075b1c1fb4c9c8ab4e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a7dc5bcd-66b4-416b-8f8a-93e56b640801
+      X-Runtime:
+      - '0.026052'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5AllGHO2RFJZyG4RsJln5hAzkOYbszESqNp98yQi7avwhi4rK9J2qfZVZpDpxyd8UsBFAVjy0MRuI5e2tz5onSQAAm556QT%2BYeJrKZGWT%2Bbks8fMXpAD%2Fqgewx1pubGnOcJEVhXmJ%2BU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6a57558c4dbc6f20-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"invoices":[{"id":"invoice_5281dfee1bccb3a5c78f802e","subtotal_cents":0,"tax_cents":0,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-20T15:03:35.113Z","created_at":"2021-10-20T15:03:35.121Z","updated_at":"2021-10-28T21:39:05.344Z","customer_id":"customer_e9585b900c38db249f38f59c","status":"voided","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Phobos","customer_email":"phobos@getplutto.com","details":[{"id":"meter_5ef790a8ee1f2d1710cd2f13","type":"per_unit","meter":"Mudanzas","quantity":0,"description":"0
+        x Mudanzas","total_price":0.0}],"billing_information":{"city":"Santiago","country_iso_code":null,"state":"Metropolitana","address":"Av.
+        las condes 13240","zip":"7591393","tax_id":"19246648-2","activity":null,"legal_name":"Plutto","phone":"+56992680522"},"total":{"cents":0,"currency_iso":"CLP"}},{"id":"invoice_90e4a5e6753d090766ec2a80","subtotal_cents":15000,"tax_cents":2850,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-25T17:55:18.753Z","created_at":"2021-10-25T17:55:18.760Z","updated_at":"2021-10-28T21:25:31.917Z","customer_id":"customer_aa97aa3f9b0f6bc4b1c8a2a3","status":"created","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Platanus","customer_email":"contact@platan.us","details":[{"id":"price-logic_0ce38b40f4c1752412ac3b72","type":"flat_fee","description":"Básico","total_price":15000.0}],"billing_information":{"city":"Santiago","country_iso_code":"CL","state":"Metropolitana","address":"Av.
+        las condes 13240","zip":"7591393","tax_id":"19246648-2","activity":null,"legal_name":"Plutto","phone":"+56992680522"},"total":{"cents":17850,"currency_iso":"CLP"}},{"id":"invoice_a7b88cede610b82c641f0630","subtotal_cents":0,"tax_cents":0,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-28T18:03:13.334Z","created_at":"2021-10-28T18:03:13.338Z","updated_at":"2021-10-28T18:03:13.338Z","customer_id":"customer_b04ef7affc19897cb8a15803","status":"created","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Jumbo","customer_email":"hola@jumbo.cl","details":[{"id":"meter_0c8008dbf7b2e48cf277987e","type":"per_unit","meter":"N°
+        de despachos","quantity":0,"description":"0 x N° de despachos","total_price":0.0}],"billing_information":{"city":null,"country_iso_code":"CL","state":null,"address":null,"zip":null,"tax_id":null,"activity":null,"legal_name":null,"phone":null},"total":{"cents":0,"currency_iso":"CLP"}},{"id":"invoice_09e4e38cac084a94966e563e","subtotal_cents":0,"tax_cents":0,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-28T18:05:51.237Z","created_at":"2021-10-28T18:05:51.246Z","updated_at":"2021-10-28T18:05:51.246Z","customer_id":"customer_b04ef7affc19897cb8a15803","status":"created","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Jumbo","customer_email":"hola@jumbo.cl","details":[{"id":"permission-group_648e47e0c9992e7c3d975824","type":"Permissions","description":"Permission
+        Group Plan básico","total_price":0.0}],"billing_information":{"city":null,"country_iso_code":"CL","state":null,"address":null,"zip":null,"tax_id":null,"activity":null,"legal_name":null,"phone":null},"total":{"cents":0,"currency_iso":"CLP"}},{"id":"invoice_46209a7d267ae3da0392afa3","subtotal_cents":0,"tax_cents":0,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-28T18:07:52.898Z","created_at":"2021-10-28T18:07:52.903Z","updated_at":"2021-10-28T18:07:52.903Z","customer_id":"customer_b04ef7affc19897cb8a15803","status":"created","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Jumbo","customer_email":"hola@jumbo.cl","details":[{"id":"permission-group_648e47e0c9992e7c3d975824","type":"Permissions","description":"Permission
+        Group Plan básico","total_price":0.0}],"billing_information":{"city":null,"country_iso_code":"CL","state":null,"address":null,"zip":null,"tax_id":null,"activity":null,"legal_name":null,"phone":null},"total":{"cents":0,"currency_iso":"CLP"}}]}'
+  recorded_at: Thu, 28 Oct 2021 21:42:29 GMT
+recorded_with: VCR 6.0.0
