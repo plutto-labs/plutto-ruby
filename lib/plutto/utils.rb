@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Plutto
   # A handful of run-of-the-mill utilities
   module Utils
@@ -19,12 +17,16 @@ module Plutto
       end
     end
 
-    # Transform a snake-cased name to its pascal-cased version.
+    # Transform query params to api url suffix.
     #
-    # @param name [String]
+    # @param q_status [String] query by status
+    # @param q_customer [String] query by customer
     # @return [String]
-    def snake_to_pascal(name)
-      name.split(/_| /).map(&:capitalize).join('')
+    def concat_query_to_url(q_status, q_customer)
+      q_status = q_status && "q[status_eq]=#{q_status}"
+      q_customer = q_customer && "q[customer_eq]=#{q_customer}"
+      suffix = [q_status, q_customer].compact.join('&')
+      suffix.present? ? "?#{suffix}" : ''
     end
   end
 end
