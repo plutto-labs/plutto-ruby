@@ -7,6 +7,7 @@ module Plutto
 
     def initialize(
       id:,
+      client:,
       customer_id:,
       created_at:,
       updated_at:,
@@ -19,6 +20,7 @@ module Plutto
       **
     )
       @id = id
+      @client = client
       @customer_id = customer_id
       @created_at = Date.parse(created_at)
       @updated_at = Date.parse(updated_at)
@@ -32,6 +34,18 @@ module Plutto
 
     def to_s
       "#{customer_id} is subscribed since #{created_at.strftime('%d %b %Y')}"
+    end
+
+    def end
+      @client.end_subscription(subscription_id: @id)
+    end
+
+    def add_pricings(*pricing_ids)
+      @client.add_pricings(subscription_id: @id, pricing_ids: pricing_ids)
+    end
+
+    def remove_pricings(*pricing_ids)
+      @client.remove_pricings(subscription_id: @id, pricing_ids: pricing_ids)
     end
 
     private
