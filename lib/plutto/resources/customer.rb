@@ -40,7 +40,7 @@ module Plutto
     private
 
     def create_subscription(data)
-      Plutto::Subscription.new(**data, customer: self)
+      Plutto::Subscription.new(**data, customer: self, client: @client)
     end
 
     def create_billing_information(data)

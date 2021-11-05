@@ -7,6 +7,8 @@ RSpec.describe Plutto::Client do
   let(:client) { described_class.new(api_key) }
   let(:customer_id) { 'ID_123' }
   let(:invoice_id) { 'invoice_5281dfee1bccb3a5c78f802e' }
+  let(:subscription_id) { 'subscription_b6144cb887f20acc7a56be89' }
+  let(:pricing_id) { 'pricing_ea1f7c8c15bee31736d12242' }
 
   let(:billing_information) do
     {
@@ -19,6 +21,15 @@ RSpec.describe Plutto::Client do
       state: nil,
       tax_id: nil,
       zip: nil
+    }
+  end
+
+  let(:subscription_data) do
+    {
+      pricing_ids: ["pricing_ea1f7c8c15bee31736d12242"],
+      billing_period_duration: 'P0Y1M0DT0H0M0S',
+      customer_id: 'customer_aa97aa3f9b0f6bc4b1c8a2a3',
+      bills_at: 'start'
     }
   end
 
@@ -148,6 +159,98 @@ RSpec.describe Plutto::Client do
     end
     it_behaves_like 'resource not found', 'invoice_mark_as' do
       let(:params) { { invoice_id: 'invalid_invoice_id', status: 'paid' } }
+    end
+  end
+
+  describe '#create_subscription' do
+    it 'creates a subscription', :vcr do
+      subscription = client.create_subscription(subscription_data)
+      expect(subscription).to be_a(Plutto::Subscription)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'create_subscription' do
+      let(:params) { subscription_data }
+    end
+    it_behaves_like 'unprocessable entity', 'create_subscription' do
+      let(:params) do
+        {
+          pricing_ids: ["pricing_ea1f7c8c15bee31736d12242"],
+          customer_id: 'customer_aa97aa3f9b0f6bc4b1c8a2a3'
+        }
+      end
+    end
+  end
+
+  describe '#end_subscription' do
+    it 'creates a end_subscription', :vcr do
+      subscription = client.end_subscription(
+        subscription_id: subscription_id
+      )
+      expect(subscription).to be_a(Plutto::Subscription)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'end_subscription' do
+      let(:params) { { subscription_id: subscription_id } }
+    end
+
+    it_behaves_like 'resource not found', 'end_subscription' do
+      let(:params) { { subscription_id: 'invalid_subscription_id' } }
+    end
+  end
+
+  describe '#add_pricings' do
+    it 'add pricings to subscription', :vcr do
+      subscription = client.add_pricings(
+        subscription_id: subscription_id,
+        pricings: [pricing_id]
+      )
+      expect(subscription).to be_a(Plutto::Subscription)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'add_pricings' do
+      let(:params) do
+        {
+          subscription_id: subscription_id,
+          pricings: [pricing_id]
+        }
+      end
+    end
+
+    it_behaves_like 'resource not found', 'add_pricings' do
+      let(:params) do
+        {
+          subscription_id: 'invalid_subscription_id',
+          pricings: ['invalid_pricing_id']
+        }
+      end
+    end
+  end
+
+  describe '#remove_pricings' do
+    it 'remove pricings from a subscription', :vcr do
+      subscription = client.remove_pricings(
+        subscription_id: subscription_id,
+        pricings: [pricing_id]
+      )
+      expect(subscription).to be_a(Plutto::Subscription)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'remove_pricings' do
+      let(:params) do
+        {
+          subscription_id: subscription_id,
+          pricings: [pricing_id]
+        }
+      end
+    end
+
+    it_behaves_like 'resource not found', 'remove_pricings' do
+      let(:params) do
+        {
+          subscription_id: 'invalid_subscription_id',
+          pricings: ['invalid_pricing_id']
+        }
+      end
     end
   end
 end

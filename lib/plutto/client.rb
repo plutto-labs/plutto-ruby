@@ -69,6 +69,30 @@ module Plutto
       Invoice.new(**invoice, client: self)
     end
 
+    def create_subscription(**params)
+      subscription = post.call('subscriptions', **params)[:subscription]
+      Subscription.new(**subscription, client: self)
+    end
+
+    def end_subscription(subscription_id:)
+      subscription = patch.call("subscriptions/#{subscription_id}/end_subscription")[:subscription]
+      Subscription.new(**subscription, client: self)
+    end
+
+    def add_pricings(subscription_id:, **params)
+      subscription = patch.call(
+        "subscriptions/#{subscription_id}/add_pricings", **params
+      )[:subscription]
+      Subscription.new(**subscription, client: self)
+    end
+
+    def remove_pricings(subscription_id:, **params)
+      subscription = patch.call(
+        "subscriptions/#{subscription_id}/remove_pricings", **params
+      )[:subscription]
+      Subscription.new(**subscription, client: self)
+    end
+
     private
 
     def get
