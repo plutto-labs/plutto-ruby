@@ -1,9 +1,9 @@
-require 'plutto/constants'
-
 module Plutto
   module Errors
     class PluttoError < StandardError
-      def initialize(message, doc_url = Plutto::Constants::GENERAL_DOC_URL)
+      def initialize(message, doc_url = Plutto::GENERAL_DOC_URL)
+        super()
+
         @message = message
         @doc_url = doc_url
       end
