@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://sandbox.getplutto.com/api/v1/customers/customer_dde1c281812f0af2fd1ba08d
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/permission_groups
     body:
       encoding: UTF-8
       string: "{}"
@@ -21,13 +21,15 @@ http_interactions:
       - http.rb/4.4.1
   response:
     status:
-      code: 204
-      message: No Content
+      code: 200
+      message: OK
     headers:
       Date:
-      - Fri, 05 Nov 2021 13:26:01 GMT
-      Content-Length:
-      - '0'
+      - Thu, 04 Nov 2021 14:35:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - close
       X-Frame-Options:
@@ -42,12 +44,14 @@ http_interactions:
       - none
       Referrer-Policy:
       - strict-origin-when-cross-origin
+      Etag:
+      - W/"04677cc788d2302028dfccc6c5ac94d9"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e4b81632-0f29-4c13-8e91-fcf22166135f
+      - 450bd940-d5da-4c16-9847-c8fdf1fd1387
       X-Runtime:
-      - '0.147010'
+      - '0.031503'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -59,18 +63,19 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XPE%2BAAx3RRiB5%2Fu%2Fi%2BtuO%2BYiW5tUYt4hSKqhDysgfI9jyZxjsIFVzXyWGbXepQSvGGIPvz%2Bt6F7dVGOXJgS9dRcuQA0RSXMRbcgzwnog8%2FPOG49cKf9JxkzJFP5pn8IBixcRwFxzsag%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=p2s5OqjXc9WiwU5MNb0U%2FIIT97%2BvFPIvQFmEW5OcrxCCtDe2s4Z1C8iUTAqF4nP9m09L4ekxCcUv%2FOAg6g5h%2F481lLS8OcKQ03E3P9EDFkGvyKjsiq6p37EM2XTvTYAkwKqbhkhGHVQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 6a9669545c3909ba-MIA
+      - 6a8e91affd9bbac0-SCL
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
         ma=86400
     body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Fri, 05 Nov 2021 13:26:02 GMT
+      encoding: UTF-8
+      string: '{"permission_groups":[{"id":"permission-group_648e47e0c9992e7c3d975824","name":"Plan
+        básico","permissions":[{"limit":100.0,"name":"Despachos"},{"limit":null,"name":"Usuarios"}]}]}'
+  recorded_at: Thu, 04 Nov 2021 14:35:29 GMT
 recorded_with: VCR 6.0.0

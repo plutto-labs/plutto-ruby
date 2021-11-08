@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://sandbox.getplutto.com/api/v1/customers/ID_123
+    uri: https://sandbox.getplutto.com/api/v1/customers/customer_dde1c281812f0af2fd1ba08d
     body:
       encoding: UTF-8
       string: "{}"
@@ -25,7 +25,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Tue, 26 Oct 2021 15:55:12 GMT
+      - Fri, 05 Nov 2021 13:26:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -47,9 +47,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 87482e6a-d23a-4158-a9fe-ceeee7aec66f
+      - dbfc98e4-443b-44f0-930d-5a46fddd552c
       X-Runtime:
-      - '0.005728'
+      - '0.007145'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -61,13 +61,13 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vUbj6Im4ux7tILIxDFjkgpu4gPX%2FEqKjYeFssvavs9puEWp4IuUS%2FjLBZmnrnoE1OY7v2Ssj5qhTYvj4T3foKgm70YkgKv0UnsSdLaGkKGMui1sRjOKFc5xKhyrlykCoJ7q%2BJZIjR8k%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kFq%2F6o6jSYdWSZhdkibu5xSjZdgnXxKkPaN%2FjgeIzRoMpeNCCx1NU0YLChJGthj5iVzFuOaELbpr1u0kL5lsQoku4Je1jdyLMqn3jeROXF%2BLfS9Kbg1McUQDbD%2Bov0%2BeOUaxGH7Ul9U%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 6a44de19dce77527-SCL
+      - 6a966959a93d2275-MIA
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
         ma=86400
@@ -75,5 +75,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":{"type":"authentication_error","code":"unauthorized","message":"No
         valid API key provided.","detail":null,"param":null,"request_id":null,"docs_url":"https://docs.getplutto.com"}}'
-  recorded_at: Tue, 26 Oct 2021 15:55:12 GMT
+  recorded_at: Fri, 05 Nov 2021 13:26:02 GMT
 recorded_with: VCR 6.0.0

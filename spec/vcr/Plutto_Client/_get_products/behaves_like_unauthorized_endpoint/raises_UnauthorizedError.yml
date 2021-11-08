@@ -1,14 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://sandbox.getplutto.com/api/v1/customers/customer_083c6b82a1a33345086f1501
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/products
     body:
       encoding: UTF-8
       string: "{}"
     headers:
       Authorization:
-      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      - Bearer invalid api_key
       Accept:
       - application/json
       Content-Type:
@@ -21,13 +21,15 @@ http_interactions:
       - http.rb/4.4.1
   response:
     status:
-      code: 204
-      message: No Content
+      code: 401
+      message: Unauthorized
     headers:
       Date:
-      - Mon, 18 Oct 2021 22:02:18 GMT
-      Content-Length:
-      - '0'
+      - Thu, 04 Nov 2021 14:33:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - close
       X-Frame-Options:
@@ -45,9 +47,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d7a4ec8c-a191-4967-aa6d-05b5c8360e19
+      - 2f75caf3-a4d1-4dff-8c51-a5813ea52867
       X-Runtime:
-      - '0.028877'
+      - '0.009722'
       Strict-Transport-Security:
       - max-age=63072000; includeSubDomains
       Vary:
@@ -59,18 +61,19 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IWuvwOb8eGHm1O0lYsEu5fo%2BVC86yZcZa8DudDDA%2BoOstex8Smwcjv38menLPtlkoLqhXeU%2FiXZF7wKwnlY3u6vbtkzQ7JbCgBkUBhGn9MvbFcSpUmzZrN7wNVNHk46IEQ3b9CMLKOI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nWyDblpaDQ5taDedZCm%2BKIiE2IvJTGyv2S1AbDq1MXrmvBNDDBG14CH8yOzB0cLg%2FkyLifEPwmkL7DpVY628ogJqSPbjl44ENOk5DNMgOjR9zt4gdKjqlhMaF4AyQYoaBNMvrSzh5xE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 6a050cd3382e2df0-SCL
+      - 6a8e8e336ac82df0-SCL
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
         ma=86400
     body:
-      encoding: ASCII-8BIT
-      string: ''
-  recorded_at: Mon, 18 Oct 2021 22:02:18 GMT
+      encoding: UTF-8
+      string: '{"error":{"type":"authentication_error","code":"unauthorized","message":"No
+        valid API key provided.","detail":null,"param":null,"request_id":null,"docs_url":"https://docs.getplutto.com"}}'
+  recorded_at: Thu, 04 Nov 2021 14:33:06 GMT
 recorded_with: VCR 6.0.0
