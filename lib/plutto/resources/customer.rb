@@ -30,7 +30,21 @@ module Plutto
     end
 
     def delete
-      @client.delete_customer(@id)
+      @client.delete_customer(customer_id: @id)
+    end
+
+    def meter_event(meter_id, amount, action, timestamp = nil)
+      if timestamp.nil?
+        @client.create_meter_event(customer_id: @id, meter_id: meter_id, amount: amount,
+                                   action: action)
+      else
+        @client.create_meter_event(customer_id: @id, meter_id: meter_id, amount: amount,
+                                   action: action, timestamp: timestamp)
+      end
+    end
+
+    def permission(name)
+      @client.get_customer_permission(customer_id: @id, permission_name: name)
     end
 
     def to_s
