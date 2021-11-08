@@ -1,14 +1,13 @@
 require 'plutto/client'
-require 'plutto/resources/customer'
-require 'plutto/resources/invoice'
 
 RSpec.describe Plutto::Client do
   let(:api_key) { 'sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f' }
   let(:client) { described_class.new(api_key) }
-  let(:customer_id) { 'ID_123' }
+  let(:customer_id) { 'customer_dde1c281812f0af2fd1ba08d' }
   let(:invoice_id) { 'invoice_5281dfee1bccb3a5c78f802e' }
   let(:subscription_id) { 'subscription_b6144cb887f20acc7a56be89' }
   let(:pricing_id) { 'pricing_ea1f7c8c15bee31736d12242' }
+  let(:meter_id) { 'meter_5ef790a8ee1f2d1710cd2f13' }
 
   let(:billing_information) do
     {
@@ -35,7 +34,7 @@ RSpec.describe Plutto::Client do
 
   let(:customer_data) do
     {
-      identifier: 'ID_123',
+      identifier: 'customer_dde1c281812f0af2fd1ba08d',
       email: 'test@gmail.com',
       billing_information: { country_iso_code: 'CL' },
       name: 'customer'
@@ -122,6 +121,55 @@ RSpec.describe Plutto::Client do
     end
 
     it_behaves_like 'unauthorized endpoint', 'get_customers'
+  end
+
+  describe '#get_customer_permission' do
+    it 'permission by its name', :vcr do
+      customers = client.get_customer_permission(
+        customer_id: customer_id, permission_name: 'Despachos'
+      )
+      expect(customers).to be_a(Plutto::CustomerPermission)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'get_customer_permission' do
+      let(:params) { { customer_id: customer_id, permission_name: 'Despachos' } }
+    end
+
+    it_behaves_like 'resource not found', 'get_customer_permission' do
+      let(:params) { { customer_id: 'invalid_customer_id', permission_name: 'invalid' } }
+    end
+  end
+
+  describe '#get_permission_groups' do
+    it 'returns an array of instances', :vcr do
+      permission_groups = client.get_permission_groups
+      expect(permission_groups).to all(be_a(Plutto::PermissionGroup))
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'get_permission_groups'
+  end
+
+  describe '#create_meter_event' do
+    it 'returns MeterEvent instance', :vcr do
+      meter_event = client.create_meter_event(
+        customer_id: customer_id,
+        meter_id: meter_id,
+        amount: 1,
+        action: 'increment'
+      )
+      expect(meter_event).to be_a(Plutto::MeterEvent)
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'get_products'
+  end
+
+  describe '#get_products' do
+    it 'every product as an instance', :vcr do
+      products = client.get_products
+      expect(products).to all(be_a(Plutto::Product))
+    end
+
+    it_behaves_like 'unauthorized endpoint', 'get_products'
   end
 
   describe '#get_invoices' do
