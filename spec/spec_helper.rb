@@ -1,8 +1,4 @@
-require 'plutto'
 require 'simplecov'
-require 'pry'
-require 'vcr'
-require 'factory_bot_rails'
 
 formatters = [SimpleCov::Formatter::HTMLFormatter]
 
@@ -14,9 +10,13 @@ end
 
 SimpleCov.start do
   enable_coverage :branch
-  add_filter { |src| src.filename !~ /lib/ }
-  add_filter "spec.rb"
+  add_filter '/spec/'
 end
+
+require 'plutto'
+require 'pry'
+require 'vcr'
+require 'factory_bot_rails'
 
 VCR.configure do |c|
   c.default_cassette_options = {
