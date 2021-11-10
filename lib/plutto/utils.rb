@@ -28,5 +28,24 @@ module Plutto
       suffix = [q_status, q_customer].compact.join('&')
       suffix.present? ? "?#{suffix}" : ''
     end
+
+    # Creates an object instaces from api response
+    #
+    # @param response [Hash] hash containing class name as first key and instance params as value
+    # @return [Object] instace of the class name from the hash key value
+    def create_instance(response)
+      klass ||= response.keys.first
+      params ||= response.values.first
+      Module.const_get("Plutto::#{klass.to_s.singularize.camelize}").new(**params, client: self)
+    end
+
+    # Creates a list of object instaces from api response
+    #
+    # @param response [Hash] hash containing class name as first key and data array as value
+    # @return [Array] of ruby objects
+    def create_all_instances(response)
+      data = response.values.first
+      data.map { |params| create_instance({ "#{response.keys.first}": params }) }
+    end
   end
 end
