@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/products
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:41:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"33ea6fd91757aa5e83710491dfaf5c33"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 34324bf3-76d8-4b54-acc0-f67391eea6df
+      X-Runtime:
+      - '0.058674'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4sII9rVmsUcWM45iC1e9SQrZ%2Fn%2BRVO9VuLU2UKn0c1KmAHHpYTV6krs%2F2AarLMhCVOJlbuJpOR3H2wCJH0D%2FN7azjEdXNCPF9RYMXn6TDRSgtU0I%2BAnc1v5Ou0kD1pz1iqqVgxXciYSo6gPitlEl3HaTdYE%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb22549692def-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"products":[{"id":"product_cfe7a030450a816d311271cb","name":"Producto
+        transporte a empresas","meter":{"id":"meter_0c8008dbf7b2e48cf277987e","name":"N°
+        de despachos"},"pricings":[{"id":"pricing_ac69388b6d914bf39783abf7","name":"Chile
+        ","currency":"CLP","product_id":"product_cfe7a030450a816d311271cb","price_logics":[{"id":"price-logic_4eac85ee90bd41a2cd8bde12","type":"PerUnit","price":"2300.0","price_currency":"CLP","meter_count_method":"period_sum","tiers":null}]}]},{"id":"product_1e32af55f6d145fc2682d1ee","name":"Plan
+        básico","meter":null,"pricings":[{"id":"pricing_199a7aa9deb625f44490ff56","name":"Chile","currency":"USD","product_id":"product_1e32af55f6d145fc2682d1ee","price_logics":[{"id":"price-logic_cee78398e5de5be385111c53","type":"FlatFee","price":"0.0","price_currency":"USD","meter_count_method":null,"tiers":null}]}]},{"id":"product_ba6a962f169ca3726c7e71b1","name":"Mudanzas","meter":{"id":"meter_5ef790a8ee1f2d1710cd2f13","name":"Mudanzas"},"pricings":[{"id":"pricing_3f039f4fff0a5ff4433e2410","name":"Básico","currency":"CLP","product_id":"product_ba6a962f169ca3726c7e71b1","price_logics":[{"id":"price-logic_a1516fa0af0e080ef7d0f394","type":"FlatFee","price":"15000.0","price_currency":"CLP","meter_count_method":null,"tiers":null}]}]},{"id":"product_cb870654623ffa74dc26c647","name":"Mudanzas","meter":{"id":"meter_5ef790a8ee1f2d1710cd2f13","name":"Mudanzas"},"pricings":[{"id":"pricing_ea1f7c8c15bee31736d12242","name":"Básico","currency":"CLP","product_id":"product_cb870654623ffa74dc26c647","price_logics":[{"id":"price-logic_0ce38b40f4c1752412ac3b72","type":"FlatFee","price":"15000.0","price_currency":"CLP","meter_count_method":null,"tiers":null}]},{"id":"pricing_a1e4fb5b0d980982d263b7ea","name":"Premium","currency":"CLP","product_id":"product_cb870654623ffa74dc26c647","price_logics":[{"id":"price-logic_a0869cf30cea30f838f7a3b4","type":"PerUnit","price":"15.0","price_currency":"CLP","meter_count_method":"period_sum","tiers":null}]}]}]}'
+  recorded_at: Wed, 10 Nov 2021 13:41:00 GMT
+recorded_with: VCR 6.0.0

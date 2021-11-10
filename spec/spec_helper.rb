@@ -19,6 +19,7 @@ require 'vcr'
 require 'factory_bot_rails'
 
 VCR.configure do |c|
+  c.allow_http_connections_when_no_cassette = true
   c.default_cassette_options = {
     re_record_interval: 3600 * 24 * 70
   }

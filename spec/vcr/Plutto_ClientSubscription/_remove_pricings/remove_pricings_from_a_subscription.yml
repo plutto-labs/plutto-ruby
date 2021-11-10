@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://sandbox.getplutto.com/api/v1/subscriptions/subscription_b6144cb887f20acc7a56be89/remove_pricings
+    body:
+      encoding: UTF-8
+      string: '{"pricings":["pricing_ea1f7c8c15bee31736d12242"]}'
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:43:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"3d8952c8b80ae0febf6201e3a65272fc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aacf90c0-f99a-4ecb-878e-28c688756e28
+      X-Runtime:
+      - '0.017150'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4ZGLkEdE3ywTz09pUsod0mRK2Nujloo1wQP9ZBnaP0ZSIafxlFS9jhFWaf613vZFrwOfFjuxpvfGCqvZu2S3fYO0pUfY2rZx3%2BSWj5XFa3Gc1mDzs%2FLqU%2F2AxQR4MsRQ7hUroc03OOFYqo1yvwQWJx%2Fkp%2FI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb62de9126f26-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"subscription":{"id":"subscription_b6144cb887f20acc7a56be89","customer_id":"customer_b04ef7affc19897cb8a15803","created_at":"2021-10-28T18:07:52.846Z","updated_at":"2021-11-04T00:12:14.416Z","active":false,"trial_finishes_at":null,"bills_at":"start","billing_period_duration":"P3M","pricings":[{"id":"pricing_ea1f7c8c15bee31736d12242","name":"Básico","currency":"CLP","product_id":"product_cb870654623ffa74dc26c647","price_logics":[{"id":"price-logic_0ce38b40f4c1752412ac3b72","type":"FlatFee","price":"15000.0","price_currency":"CLP","meter_count_method":null,"tiers":null}]}],"permission_group":null}}'
+  recorded_at: Wed, 10 Nov 2021 13:43:45 GMT
+recorded_with: VCR 6.0.0

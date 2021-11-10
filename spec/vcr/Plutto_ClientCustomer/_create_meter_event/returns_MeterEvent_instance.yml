@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.getplutto.com/api/v1/meter_events
+    body:
+      encoding: UTF-8
+      string: '{"customer_id":"customer_7439352cf50e2616ef8d997a","meter_id":"meter_5ef790a8ee1f2d1710cd2f13","amount":1,"action":"increment"}'
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:40:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"a1fd9f3964ebb2cd31c50ca90505b7d7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d8c3d716-04f8-41f7-9eb7-69996dab3588
+      X-Runtime:
+      - '0.031775'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DapHxDBN%2BTjeLKc9XsoGiCuRryY4JkZGza0odc1WGkXloN1Mf6GgB10%2BkwfXrJwEXJlyAxipAdBPPpxcnxDhuYFHqmJ7SO5TliAFpxK18PIuYi64rs1dkTG12vbxCLZURBfoX6DxcK5%2BEc0RV2qelWf%2F4%2BI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb20f3d892dee-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"meter_event":{"id":"event_628d8c6c18fa4eff83cea65d","timestamp":"2021-11-10T13:40:56.914Z","amount":1.0,"action":"increment","created_at":"2021-11-10T13:40:56.923Z","idempotency_key":null,"meter_id":"meter_5ef790a8ee1f2d1710cd2f13","customer_id":"customer_7439352cf50e2616ef8d997a"}}'
+  recorded_at: Wed, 10 Nov 2021 13:40:57 GMT
+recorded_with: VCR 6.0.0

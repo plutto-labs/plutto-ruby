@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/customers
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:40:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Link:
+      - <https://sandbox.getplutto.com/api/v1/customers?page=2>; rel="last", <https://sandbox.getplutto.com/api/v1/customers?page=2>;
+        rel="next"
+      X-Per-Page:
+      - '25'
+      X-Page:
+      - '1'
+      X-Total:
+      - '37'
+      Etag:
+      - W/"18a654ac613f19d74c9334b05402f475"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b3d18fc5-fe01-4446-b0cb-e7e1ed81ed3b
+      X-Runtime:
+      - '0.018142'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aZGqmgXAf8PrzxysSoJaRiHfg%2BINF35mfxyCwqv7yXPOS%2B49Ha4DP1p%2B1Ubc8MUCAe69LEqNHT7YPxWabPp9s6S2ZrzKeZqCgz%2Fb0Wl30HEpGIwLkZsQOW%2Fa%2FyKy8OdeZI8KBHCtQI4Z9j9yaE4mERPPzb4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb205beaf6f20-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"customers":[{"id":"customer_e9585b900c38db249f38f59c","identifier":"a","name":"Phobos","email":"phobos@getplutto.com","created_at":"2021-09-24T17:29:43.914Z","updated_at":"2021-09-24T17:29:43.914Z"},{"id":"customer_aa97aa3f9b0f6bc4b1c8a2a3","identifier":"customer_aa97aa3f9b0f6bc4b1c8a2a3","name":"Platanus","email":"contact@platan.us","created_at":"2021-10-04T14:11:12.015Z","updated_at":"2021-10-04T14:11:12.015Z"},{"id":"customer_64b9534dd761b596aa7f05a8","identifier":"customer_64b9534dd761b596aa7f05a8","name":"Platanus","email":"contact@platan.us","created_at":"2021-10-04T18:22:41.529Z","updated_at":"2021-10-04T18:22:41.529Z"},{"id":"customer_7a6c49abab8ac509155fb2f2","identifier":"customer_7a6c49abab8ac509155fb2f2","name":"Platanus","email":"contact@platan.us","created_at":"2021-10-04T21:51:55.104Z","updated_at":"2021-10-04T21:51:55.104Z"},{"id":"customer_b04ef7affc19897cb8a15803","identifier":"33","name":"Jumbo","email":"hola@jumbo.cl","created_at":"2021-10-25T18:11:32.329Z","updated_at":"2021-10-25T18:11:32.329Z"},{"id":"customer_71d4432f4d246c595677bdae","identifier":"ID_123","name":"customer","email":"test@gmail.com","created_at":"2021-11-05T13:25:58.362Z","updated_at":"2021-11-05T13:25:58.362Z"},{"id":"customer_0a436d2ec67a359945d73149","identifier":"customer_0a436d2ec67a359945d73149","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:25:26.835Z","updated_at":"2021-11-05T14:25:26.835Z"},{"id":"customer_ec264ec48a31c805ee9f3519","identifier":"customer_ec264ec48a31c805ee9f3519","name":"b","email":"marco@platan.us","created_at":"2021-11-05T14:25:33.127Z","updated_at":"2021-11-05T14:25:33.127Z"},{"id":"customer_3129b2ef1e9a1696466624f6","identifier":"customer_3129b2ef1e9a1696466624f6","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:31:38.594Z","updated_at":"2021-11-05T14:31:38.594Z"},{"id":"customer_88f7a257d838f60f518fd7a8","identifier":"customer_88f7a257d838f60f518fd7a8","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:24.749Z","updated_at":"2021-11-05T14:33:24.749Z"},{"id":"customer_dc78a53b1e1d2b1c98197302","identifier":"customer_dc78a53b1e1d2b1c98197302","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:39.734Z","updated_at":"2021-11-05T14:33:39.734Z"},{"id":"customer_fd3c193c00220ecb65e50462","identifier":"customer_fd3c193c00220ecb65e50462","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:40.364Z","updated_at":"2021-11-05T14:33:40.364Z"},{"id":"customer_32877876db14c029e8b38d8e","identifier":"customer_32877876db14c029e8b38d8e","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:41.005Z","updated_at":"2021-11-05T14:33:41.005Z"},{"id":"customer_0ba11e6516a9f17e2d18076a","identifier":"customer_0ba11e6516a9f17e2d18076a","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:41.765Z","updated_at":"2021-11-05T14:33:41.765Z"},{"id":"customer_c26794e42dc1d5bd38ade598","identifier":"customer_c26794e42dc1d5bd38ade598","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:42.355Z","updated_at":"2021-11-05T14:33:42.355Z"},{"id":"customer_6aef4f9f0c52f1471e2d5f20","identifier":"customer_6aef4f9f0c52f1471e2d5f20","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:43.062Z","updated_at":"2021-11-05T14:33:43.062Z"},{"id":"customer_eef4c66ea8e7d7f27dbe9e9e","identifier":"customer_eef4c66ea8e7d7f27dbe9e9e","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:43.895Z","updated_at":"2021-11-05T14:33:43.895Z"},{"id":"customer_428b12c6ead19733cefb8891","identifier":"customer_428b12c6ead19733cefb8891","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:44.646Z","updated_at":"2021-11-05T14:33:44.646Z"},{"id":"customer_864fe1d01eef2dbf33a1a66f","identifier":"customer_864fe1d01eef2dbf33a1a66f","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:45.367Z","updated_at":"2021-11-05T14:33:45.367Z"},{"id":"customer_dd1d9a83fbfabfbfd461e519","identifier":"customer_dd1d9a83fbfabfbfd461e519","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:46.102Z","updated_at":"2021-11-05T14:33:46.102Z"},{"id":"customer_fb6ca15b056218aefef4cee3","identifier":"customer_fb6ca15b056218aefef4cee3","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:46.798Z","updated_at":"2021-11-05T14:33:46.798Z"},{"id":"customer_2f9a347f2bd647a3fc21ed69","identifier":"customer_2f9a347f2bd647a3fc21ed69","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:47.408Z","updated_at":"2021-11-05T14:33:47.408Z"},{"id":"customer_1cf2678ae79d41661736a66d","identifier":"customer_1cf2678ae79d41661736a66d","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:48.233Z","updated_at":"2021-11-05T14:33:48.233Z"},{"id":"customer_b37fbd2bbc67208e702dcc16","identifier":"customer_b37fbd2bbc67208e702dcc16","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:49.045Z","updated_at":"2021-11-05T14:33:49.045Z"},{"id":"customer_789dd481f66257a1991d8f67","identifier":"customer_789dd481f66257a1991d8f67","name":"a","email":"marco@platan.us","created_at":"2021-11-05T14:33:49.852Z","updated_at":"2021-11-05T14:33:49.852Z"}]}'
+  recorded_at: Wed, 10 Nov 2021 13:40:55 GMT
+recorded_with: VCR 6.0.0
