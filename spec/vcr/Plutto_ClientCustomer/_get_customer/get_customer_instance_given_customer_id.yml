@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox.getplutto.com/api/v1/customers/customer_dde1c281812f0af2fd1ba08d
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:40:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"42708f76f7734f814a6999cc603f5b4a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 59bf1fc6-6ea2-47ec-b168-71a999719e78
+      X-Runtime:
+      - '0.098486'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9ta1qedEBB8yhFozvwh9C0FMeId8jz1X9Bq14%2B1u9%2ByH50tK4L1zEnK6whpH2pRGYSETQyBNXgDbT9VG59Di0Ajaq00UOE%2B9tkkS39GSteoFkyTRZ2IPmHYCSeu%2B3GQWBMWiVVZRps%2F58peK6LcgbeWNfKA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb1f26a6d2df3-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"customer":{"id":"customer_8946097aa91a41f37338174b","identifier":"customer_dde1c281812f0af2fd1ba08d","name":"customer","email":"test@gmail.com","created_at":"2021-11-10T13:40:51.037Z","updated_at":"2021-11-10T13:40:51.037Z","active_subscription":null,"billing_information":{"city":null,"country_iso_code":"CL","state":null,"address":null,"zip":null,"tax_id":null,"activity":null,"legal_name":null,"phone":null}}}'
+  recorded_at: Wed, 10 Nov 2021 13:40:52 GMT
+recorded_with: VCR 6.0.0

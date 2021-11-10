@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://sandbox.getplutto.com/api/v1/invoices/invoice_5281dfee1bccb3a5c78f802e/mark_as
+    body:
+      encoding: UTF-8
+      string: '{"status":"paid"}'
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:40:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"60d257b8fc4634ccb0f790932af44bc6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7043b34-d760-4e10-a798-8ce6e9a4e984
+      X-Runtime:
+      - '0.047126'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xkpvixO27LhLc5BuOiGcCNPy5vxEwW8uJB5cqDohytuSaRhbAjlwcpEsEtbs3JeJMH4pSaNPDNGUhaBURWHwieHwcYIO6gwhoki2jfLGJ0QLfSs%2BKgkNpmvtM%2F2V3TrvMfNozOZYTyTNmk1aYW4NpTh94tA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb21c9e736f2f-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"invoice":{"id":"invoice_5281dfee1bccb3a5c78f802e","subtotal_cents":0,"tax_cents":0,"discount_cents":0,"currency":"CLP","issue_date":"2021-10-20T15:03:35.113Z","created_at":"2021-10-20T15:03:35.121Z","updated_at":"2021-10-28T21:42:41.920Z","customer_id":"customer_e9585b900c38db249f38f59c","status":"paid","payed_at":null,"payment_method":null,"tax_type":null,"document_id":null,"customer_name":"Phobos","customer_email":"phobos@getplutto.com","details":[{"id":"meter_5ef790a8ee1f2d1710cd2f13","type":"per_unit","meter":"Mudanzas","quantity":0,"description":"0
+        x Mudanzas","total_price":0.0}],"billing_information":{"city":"Santiago","country_iso_code":null,"state":"Metropolitana","address":"Av.
+        las condes 13240","zip":"7591393","tax_id":"19246648-2","activity":null,"legal_name":"Plutto","phone":"+56992680522"},"total":{"cents":0,"currency_iso":"CLP"}}}'
+  recorded_at: Wed, 10 Nov 2021 13:40:59 GMT
+recorded_with: VCR 6.0.0

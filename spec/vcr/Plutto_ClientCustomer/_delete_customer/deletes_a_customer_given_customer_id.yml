@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox.getplutto.com/api/v1/customers/customer_dde1c281812f0af2fd1ba08d
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer sk_live_0a641854b17cdfed9e98eb7cd3e9e2bfc2687a37470cc8ce71f31c49e33d037f
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:40:54 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d5cd417a-e001-4000-8b71-05ace7a0875f
+      X-Runtime:
+      - '0.040279'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=u64u1qqBYD89oRxvwibTuZ61OQqshBUAOy6K3enMF6wyQe9Nnv3cnK4tFhDjjqHo62TpRGak2E%2BZMBrH3XHavO91xPtMXWHH%2BpL4NhxIYVxR02HHoy40O9TFYXA1GWd0HScXyifLNE4Yjd%2FYo8GaEjNsOSI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfb1fe9c2b2df4-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Wed, 10 Nov 2021 13:40:54 GMT
+recorded_with: VCR 6.0.0

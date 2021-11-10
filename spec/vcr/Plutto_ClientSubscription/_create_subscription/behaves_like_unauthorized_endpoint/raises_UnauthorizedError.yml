@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.getplutto.com/api/v1/subscriptions
+    body:
+      encoding: UTF-8
+      string: '{"pricing_ids":["pricing_ea1f7c8c15bee31736d12242"],"billing_period_duration":"P0Y1M0DT0H0M0S","customer_id":"customer_7439352cf50e2616ef8d997a","bills_at":"start"}'
+    headers:
+      Authorization:
+      - Bearer invalid api_key
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - sandbox.getplutto.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 10 Nov 2021 13:49:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d3f1ebc5-8671-4ad7-b917-33c12433a733
+      X-Runtime:
+      - '0.004921'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains
+      Vary:
+      - Origin
+      Via:
+      - 1.1 vegur
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Pbo3gWo3whhFXkdtAp98HtpqDgR%2Bkb706aQNtbPuhJnDdh%2FRieChm8bo3%2B91r0Ra5IPSFii%2F57snOB%2BUHykHtFAXAcMh9mmaX%2BhZIIDSDBZDyovR6NZ5JT2elRUok8yRcyqnP%2Fm39tzRFSUAbI8GKb9Jjjs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6abfbefe9c4fbaba-SCL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"error":{"type":"authentication_error","code":"unauthorized","message":"No
+        valid API key provided.","detail":null,"param":null,"request_id":null,"docs_url":"https://docs.getplutto.com"}}'
+  recorded_at: Wed, 10 Nov 2021 13:49:46 GMT
+recorded_with: VCR 6.0.0
