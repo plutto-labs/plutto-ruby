@@ -1,7 +1,7 @@
 module Plutto
   module Errors
     class PluttoError < StandardError
-      def initialize(message, doc_url = Plutto::GENERAL_DOC_URL)
+      def initialize(message, doc_url = GENERAL_DOC_URL)
         super()
 
         @message = message
